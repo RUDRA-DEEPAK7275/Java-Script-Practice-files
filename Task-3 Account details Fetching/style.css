@@ -1,0 +1,17 @@
+.dashboard-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.dashboard-list .dl{
+    background-color: rgb(86, 15, 228);
+    padding: 80px;
+    margin-top: 80px;
+}
+
+.dashboard-list .dl a{
+    color: rgba(228, 212, 234, 0.969);
+    text-decoration: none;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debit</title>
+    <script src="index.js"></script>
+</head>
+<body>
+    <h1>Debit</h1>
+    <br><br>
+    <div>
+        <ul>
+            <li><a href="index.html"><button id ="homebtn">Home</button></a></li>
+            <li><button id="creditbtn" onclick="C1()">Credit</button></li>
+            <li><button id="debitbtn" onclick="D1()">Account</button></li>
+
+        </ul>
+    </div>
+    <br><br>
+    <label for="Debit">Enter your amount to debited.</label>
+    <input type="number" id="dbtamt">
+    <button id="debbtn" onclick="">Withdrawal</button>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Withdrawal history</th>
+        </tr>
+        <tr>
+            <th>Rudra Deepak</th>
+            <th id="debited">Output</th>
+        </tr>
+    </table>
+    <a href="account.html">check bls</a>
+<!-- <form action="">
+    <input type="number" name="" id="dbtAmt">
+    <input type="submit" name="" id="debSub">
+</form> -->
+<script>
+    let accBls = 100000
+    document.getElementById('debbtn').addEventListener('click', function  () {
+        let dbtval = document.getElementById('dbtamt').value;
+        const dbtRes = accBls - dbtval
+        alert(dbtRes)
+        localStorage.setItem('currentBls', dbtRes)
+    })
+</script>
+
+
+
+</body>
+
+</html>
