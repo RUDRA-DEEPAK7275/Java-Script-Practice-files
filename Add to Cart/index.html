@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body bgcolor="wheat">
+    <form action="">
+        <input type="number" id="min" placeholder="enter min value" />
+        <input type="number" id="max" placeholder="enter max value" />
+        <input type="button" value="filter" name="" class="filter">
+    </form>
+    <div class="main" style="display: flex;flex-wrap: wrap;">
+        <div class="card" style="border: 2px solid ;padding: 2%;margin: 2%;" data-value="12569">
+            <img src="" alt="">
+            <p>Brand : OnePlus</p>
+            <p>Model Name : OnePlus Nord CE 3</p>
+            <p>CPU Speed: 2.7 GHz</p>
+            <p>Operating System : Android 14, OxygenOS</p>
+            <p>RAM : 8GB</p>
+            <p>Memory Storage Capacity 128 GB</p>
+            <p>CPU Model : Snapdragon</p>
+            <p>Price : 16,599</p>
+            <button>add to cart</button>
+        </div>
+        <div class="card" style="border: 2px solid ;padding: 2%;margin: 2%;" data-value="690000">
+            <p>Brand :OnePlus </p>
+            <p>Model Name : OnePlus Nord CE 4</p>
+            <p>CPU Speed: 2.7 GHz</p>
+            <p>Operating System : Android 14, OxygenOS</p>
+            <p>RAM :8 GB</p>
+            <p>Memory Storage Capacity 128 GB</p>
+            <p>CPU Model : Snapdragon712</p>
+            <p>Price : 22,999</p>
+            <button>add to cart</button>
+        </div>
+        <div class="card" style="border: 2px solid ;padding: 2%;margin: 2%;" data-value="25000">
+            <p>Brand :Realme</p>
+            <p>Model Name : Realme Turbo 7</p>
+            <p>Operating System : Android 14</p>
+            <p>RAM : 8 GB</p>
+            <p>CPU Model : Dimensity 7300 Energy 5G Chipset</p>
+            <p>CPU Speed 2.5 GHz</p>
+            <p>Price : 20,999</p>
+            <button>add to cart</button>
+        </div>
+        <div class="card" style="border: 2px solid ;padding: 2%;margin: 2%;" data-value="40000">
+            <p>Brand : Realme</p>
+            <p>Model Name :Realme GT 7 Pro</p>
+            <p>Operating System : Android 15</p>
+            <p>RAM : 8 GB</p>
+            <p>Memory Storage Capacity: 256 GB</p>
+            <p>CPU Model : Snapdragon</p>
+            <p>Price : 69,999</p>
+            <button>add to cart</button>
+        </div>
+        <div class="card" style="border: 2px solid ;padding: 2%;margin: 2%;" data-value="50000">
+            <p>Brand : SamSung</p>
+            <p>Model Name :Samsung Galaxy S23 Ultra</p>
+            <p>Operating System : Android 14</p>
+            <p>RAM : 12 GB</p>
+            <p>CPU Model : Snapdragon 8 Gen-2</p>
+            <p>CPU Speed : 2.99 GHz</p>
+            <p>Price : 50000</p>
+            <button>add to cart</button>
+        </div>
+        <div class="card" style="border: 2px solid ;padding: 2%;margin: 2%;" data-value="30000">
+            <p>Brand : Redmi</p>
+            <p>Operating System : Android 14, Xiaomi HyperOS</p>
+            <p>RAM : 6 GB</p>
+            <p>CPU Model : Snapdragon</p>
+            <p>Price : 30000</p>
+            <button>add to cart</button>
+        </div>
+        <div class="card" style="border: 2px solid ;padding: 2%;margin: 2%;" data-value="8000">
+            <p>Brand : Redmi</p>
+            <p>Operating System : Android 14, Xiaomi HyperOS</p>
+            <p>RAM : 6 GB</p>
+            <p>CPU Model : Snapdragon</p>
+            <p>Price : 8000</p>
+            <button>add to cart</button>
+        </div>
+        <div class="card" style="border: 2px solid ;padding: 2%;margin: 2%;" data-value="10000">
+            <p>Brand : Redmi</p>
+            <p>Operating System : Android 14, Xiaomi HyperOS</p>
+            <p>RAM : 6 GB</p>
+            <p>CPU Model : Snapdragon</p>
+            <p>Price : 10,000</p>
+            <button>add to cart</button>
+        </div>
+    </div>
+
+
+    <script>
+        document.querySelectorAll('.card').forEach(function (ele) {
+            document.querySelector('.filter').addEventListener('click', function () {
+                let minVal = parseInt(document.getElementById('min').value);
+                let maxVal = parseInt(document.getElementById('max').value);
+
+                let dataItems = ele.getAttribute('data-value');
+
+                if (dataItems >= minVal && dataItems <= maxVal) {
+                    ele.style.display = "block"
+                }
+                else {
+                    ele.style.display = "none"
+                }
+
+            })
+        })
+
+    </script>
+
+</body>
+
+</html>
